@@ -11,7 +11,7 @@ happiness :)
 >>> db.search(User.name == 'John')
 [{'name': 'John', 'age': 22}]
 
-User's Guide
+User's Guide-test
 ------------
 
 .. toctree::
@@ -21,7 +21,7 @@ User's Guide
    getting-started
    usage
 
-Extending TinyDB
+Extending TinyDB-test2
 ----------------
 
 .. toctree::
@@ -30,7 +30,7 @@ Extending TinyDB
    Extending TinyDB <extend>
    TinyDB Extensions <extensions>
 
-API Reference
+API Reference-test3
 -------------
 
 .. toctree::
@@ -38,7 +38,7 @@ API Reference
 
    api
 
-Additional Notes
+Additional Notes-test4
 ----------------
 
 .. toctree::
