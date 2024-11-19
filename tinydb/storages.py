@@ -13,7 +13,7 @@ from typing import Dict, Any, Optional
 __all__ = ('Storage', 'JSONStorage', 'MemoryStorage')
 
 
-def touch(path: str, create_dirs: bool):
+def create_file_if_not_exists(path: str, create_dirs: bool):
     """
     Create a file if it doesn't exist yet.
 
@@ -110,7 +110,7 @@ class JSONStorage(Storage):
         # Create the file if it doesn't exist and creating is allowed by the
         # access mode
         if any([character in self._mode for character in ('+', 'w', 'a')]):  # any of the writing modes
-            touch(path, create_dirs=create_dirs)
+            create_file_if_not_exists(path, create_dirs=create_dirs)
 
         # Open the file for reading/writing
         self._handle = open(path, mode=self._mode, encoding=encoding)
